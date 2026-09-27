@@ -1,158 +1,58 @@
-# EduGrade: AI-Powered Grading and Feedback System
+# EduGrade
 
-![EduGrade Logo](public/logo.png)
+**AI-powered grading and feedback system built with Google Gemini — Google Developer Challenge submission.**
 
-## 🏆 Google Developer Challenge (GDC) Submission
-
-EduGrade is an AI-powered educational platform that streamlines the assignment, submission, and grading process using Google's Gemini AI. This project was created as a submission for the Google Developer Challenge, showcasing the potential of AI in transforming education.
-
-## 🚀 Key Features
-
-- **Automated Grading**: Uses Gemini AI to evaluate student submissions with detailed feedback
-- **Personalized Feedback**: Provides tailored suggestions for improvement based on rubric criteria
-- **Dashboard for Teachers and Students**: Separate interfaces with role-appropriate functionality
-- **Assignment Management**: Create, distribute, and track assignments with ease
-- **Real-time Feedback**: Immediate grading and feedback after submission
-
-## 🧠 Gemini AI Integration
-
-EduGrade leverages Google's Gemini AI model to:
-- Grade assignments based on custom rubrics
-- Generate detailed, personalized feedback
-- Identify strengths and areas for improvement
-- Provide consistent evaluation across all submissions
-
-## 🛠️ Technologies Used
-
-- **Frontend**: React, React Router, CSS
-- **Backend**: Node.js, Express.js
-- **AI**: Google Gemini API via @google/generative-ai package
-- **Database**: MongoDB
-- **Authentication**: JWT-based user authentication
-- **File Storage**: Local file system (with cloud storage option)
-
-## 📋 Project Structure
-
-```
-edugrade/
-├── api/                # Backend server code
-│   ├── routes/         # API endpoints
-│   │   ├── assignments.js
-│   │   ├── auth.js
-│   │   └── feedback.js
-│   └── server.js       # Main server file
-├── public/             # Static files
-├── src/                # React frontend
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components
-│   └── styles/         # CSS styles
-├── data/               # Uploaded submissions
-└── .env                # Environment variables
-```
-
-## 🚦 Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB (local or Atlas connection)
-- Gemini API key
-
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/aditya2006p/edugrade.git
-   cd edugrade
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file in the project root:
-   ```
-   PORT=5001
-   MONGODB_URI=mongodb://localhost:27017/edugrade
-   GEMINI_API_KEY=your-gemini-api-key
-   NODE_ENV=development
-   ```
-
-4. Start the backend server:
-   ```
-   cd api
-   node server.js
-   ```
-
-5. In a new terminal, start the frontend:
-   ```
-   npm start
-   ```
-
-6. Access the application at `http://localhost:5000`
-
-## 🎯 Use Cases
-
-### For Teachers
-- Create assignments with custom rubrics
-- View all student submissions
-- Monitor grading progress
-- Review AI-generated feedback
-- Override grades when necessary
-
-### For Students
-- View assigned work with due dates
-- Submit assignments (text or file upload)
-- Receive immediate feedback
-- Track progress across all courses
-
-## 🔍 How It Works
-
-1. **Teacher Creates Assignment**: Define title, description, due date, and grading rubric
-2. **Students Submit Work**: Enter text directly or upload files
-3. **Gemini AI Grades**: The AI evaluates submissions based on the rubric
-4. **Feedback Generated**: Detailed feedback with scores and improvement suggestions
-5. **Teacher Review**: Optional review and adjustment of AI-generated grades
-
-## 🌟 Why EduGrade Stands Out
-
-- **Time-Saving**: Reduces grading time by 70%
-- **Consistency**: Eliminates grader bias and inconsistency
-- **Personalization**: Each student receives tailored feedback
-- **Scalability**: Handles classes of any size with equal efficiency
-- **Accessibility**: Provides immediate feedback regardless of time or location
-
-## 🔮 Future Enhancements
-
-- Integration with learning management systems (LMS)
-- Plagiarism detection
-- Multi-language support
-- Advanced analytics for learning patterns
-- Voice and video submission capabilities
-
-## 📷 Screenshots
-
-![Teacher Dashboard](public/teacher-dashboard.png)
-![Student View](public/student-view.png)
-![Feedback Interface](public/feedback.png)
-
-## 👥 Team
-
-- Aditya Pandey - Full Stack Developer & AI Integration
-- Vivek Negi - Team Leader & AI Integration Specialist
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Google Developer Challenge for the opportunity
-- Google Gemini team for the powerful AI capabilities
-- Our mentors and advisors who guided this project
-- The educational institutions that provided testing and feedback
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square&logo=google&logoColor=white)
 
 ---
 
-*Built with ❤️ for the Google Developer Challenge* 
+## What It Does
+
+Streamlines the assignment workflow by using Google Gemini AI to evaluate student submissions and provide detailed, personalized feedback based on custom rubrics.
+
+**Key Features:**
+- **Automated Grading** — Gemini evaluates submissions against rubrics
+- **Personalized Feedback** — AI-generated suggestions for improvement
+- **Teacher Dashboard** — manage assignments, rubrics, and grades
+- **Student Dashboard** — submit work and view AI feedback instantly
+
+## Architecture
+
+```
+Student/Teacher Dashboards (React) ↔ Express.js API ↔ MongoDB (Data)
+                                              ↕
+                                       Google Gemini API (Grading Engine)
+```
+
+## Tech Stack
+
+| Component | Technology |
+|---|---|
+| Frontend | React, CSS |
+| Backend | Node.js, Express.js |
+| AI | Google Gemini API |
+| Database | MongoDB |
+
+## My Role
+
+I designed the grading pipeline, planned the role-based dashboard, and structured the Gemini prompt engineering for rubric-aligned grading. Code generation was accelerated using AI tools; Gemini API prompt tuning and integration are mine.
+
+## Quick Start
+
+```bash
+git clone https://github.com/AdityaPandey-DEV/Edugrade.git && cd Edugrade
+npm install
+# Configure .env (MongoDB + Gemini API Key)
+npm start
+```
+
+---
+
+<div align="center">
+
+*Architected & built by [Aditya Pandey](https://github.com/AdityaPandey-DEV) — AI-augmented development*
+
+</div>
